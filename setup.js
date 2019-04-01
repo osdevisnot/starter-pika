@@ -22,7 +22,7 @@ fs.writeFileSync(fromRoot('README.md'), `#${name}\n\n`, 'utf-8')
 /**
  * Rewrite files replacing starter name
  */
-const rewriteFiles = ['public/index.html', 'public/manifest.json', 'src/index.js', 'package.json']
+const rewriteFiles = ['src/index.html', 'src/index.js', 'package.json']
 rewriteFiles.forEach(file => {
   const content = fs.readFileSync(fromRoot(file), 'utf-8')
   fs.writeFileSync(fromRoot(file), content.replace(/starter-pika/g, name), 'utf-8')
